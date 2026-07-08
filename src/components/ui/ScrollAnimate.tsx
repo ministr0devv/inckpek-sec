@@ -45,3 +45,27 @@ export function ScrollAnimate({
     </motion.div>
   );
 }
+
+interface StaggerGridProps {
+  children: ReactNode[];
+  className?: string;
+  staggerDelay?: number;
+  baseDelay?: number;
+}
+
+export function StaggerGrid({
+  children,
+  className,
+  staggerDelay = 0.1,
+  baseDelay = 0,
+}: StaggerGridProps) {
+  return (
+    <div className={className}>
+      {children.map((child, i) => (
+        <ScrollAnimate key={i} delay={baseDelay + i * staggerDelay}>
+          {child}
+        </ScrollAnimate>
+      ))}
+    </div>
+  );
+}
