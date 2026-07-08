@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@theme inline {
+  --color-ink-950: #030307;
+  --color-ink-900: #05050a;
+  --color-ink-800: #0a0a12;
+  --color-ink-700: #0f0f1a;
+  --color-ink-600: #141420;
+  --color-ink-500: #1a1a2e;
+  --color-ink-400: #262640;
+  --color-ink-300: #3a3a5c;
+  --color-ink-200: #555580;
+  --color-ink-100: #8080aa;
+  --color-ink-50: #aeaecf;
+  --color-cian: #00b4d8;
+  --color-cian-50: #e0f7ff;
+  --color-cian-100: #b3ecff;
+  --color-cian-200: #80e0ff;
+  --color-cian-300: #4dd4ff;
+  --color-cian-400: #26c8ff;
+  --color-cian-500: #00b4d8;
+  --color-cian-600: #0090ad;
+  --color-cian-700: #006c82;
+  --color-cian-800: #004857;
+  --color-cian-900: #00242d;
+  --color-surface: #030307;
+  --color-surface-card: #0a0a12;
+  --color-surface-elevated: #141420;
+  --color-surface-border: #1a1a2e;
+  --color-surface-hover: #262640;
+  --color-text-primary: #ececf1;
+  --color-text-secondary: #9d9db5;
+  --color-text-muted: #5c5c7a;
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-mono: JetBrains Mono, Fira Code, monospace;
+  --shadow-glow-cian: 0 0 20px rgba(0, 180, 216, 0.15);
+  --shadow-glow-cian-lg: 0 0 40px rgba(0, 180, 216, 0.1);
+  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #030307;
+  color: #ececf1;
+  font-family: Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+::selection {
+  background-color: rgba(0, 180, 216, 0.2);
+  color: #ececf1;
+}
