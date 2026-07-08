@@ -1,61 +1,102 @@
+"use client";
+
 import { cn } from "@/lib/utils";
+import { ScrollAnimate } from "@/components/ui/ScrollAnimate";
 
 const solutions = [
   {
-    title: "Auditoría Ofensiva Avanzada",
-    subtitle: "Pentesting",
+    title: "Ingenier&iacute;a Inversa de Aplicaciones",
+    subtitle: "Reverse Engineering",
     description:
-      "Evaluación profunda de la postura de seguridad mediante análisis manual experto. Identificamos vectores de ataque reales antes de que un adversario los exploite.",
+      "Descompilaci&oacute;n y an&aacute;lisis de binarios, ofuscaci&oacute;n de l&oacute;gica de negocio y detecci&oacute;n de backdoors encubiertas en c&oacute;digo propietario. Ideamos el contraataque antes de que el atacante complete su misi&oacute;n.",
     tags: [
-      "Pentesting Web & APIs",
-      "Análisis de Lógica de Negocio",
-      "OWASP Top 10",
-      "Simulación de Adversarios",
+      "Descompilaci&oacute;n",
+      "An&aacute;lisis de Binarios",
+      "Ofuscaci&oacute;n",
+      "Detecci&oacute;n de Backdoors",
     ],
   },
   {
-    title: "Hardening & Remediación",
-    subtitle: "de Código",
+    title: "Pentesting de APIs Financieras",
+    subtitle: "API Security",
     description:
-      "Corrección e inyección directa de parches sobre el código fuente para mitigar vulnerabilidades antes de que lleguen a producción.",
+      "Pruebas de penetraci&oacute;n espec&iacute;ficas sobre APIs REST, GraphQL y WebSocket con l&oacute;gica transaccional. Verificamos autorizaci&oacute;n horizontal, rate-limiting, inyecci&oacute;n y exposici&oacute;n de datos sensibles.",
     tags: [
-      "Next.js & TypeScript",
-      "Arquitecturas Supabase",
-      "Parches de Código Directos",
-      "Revisión Estática (SAST)",
+      "REST & GraphQL",
+      "WebSocket",
+      "Autorizaci&oacute;n Horizontal",
+      "Rate-Limiting",
     ],
   },
   {
-    title: "Consultoría DevSecOps",
-    subtitle: "& IA",
+    title: "Hardening de Infraestructura Cloud",
+    subtitle: "Cloud Security",
     description:
-      "Automatización y blindaje de flujos de despliegue continuo e integración segura de Inteligencia Artificial en los pipelines de desarrollo.",
+      "Auditor&iacute;a de configuraci&oacute;n en AWS, Vercel y Supabase. Endurecimiento de buckets S3, funciones serverless, pol&iacute;ticas IAM y reglas de firewall para eliminar superficies de ataque en entornos cloud-native.",
     tags: [
-      "Pipelines Seguros (CI/CD)",
-      "Hardening de LLMs",
-      "Automatización de Escaneos",
-      "Cumplimiento Técnico",
+      "AWS IAM",
+      "Supabase RLs",
+      "Vercel WAF",
+      "Serverless Hardening",
+    ],
+  },
+  {
+    title: "Auditor&iacute;a DevSecOps Continuo",
+    subtitle: "Pipeline Security",
+    description:
+      "Integraci&oacute;n de an&aacute;lisis SAST/DAST en pipelines CI/CD. Escaneo automatizado de dependencias, secrets expuestos y pol&iacute;ticas de compliance t&eacute;cnico para prevenir la deriva de seguridad en cada deploy.",
+    tags: [
+      "SAST Automatizado",
+      "DAST Continuo",
+      "Escaneo de Dependencias",
+      "Compliance T&eacute;cnico",
+    ],
+  },
+  {
+    title: "Revisi&oacute;n de C&oacute;digo Fuente",
+    subtitle: "Code Review",
+    description:
+      "An&aacute;lisis manual l&iacute;nea por l&iacute;nea de repositorios Next.js, TypeScript y Supabase. Identificamos vulnerabilidades en l&oacute;gica de autenticaci&oacute;n, manejo de sesiones, sanitizaci&oacute;n de inputs y control de acceso.",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Autenticaci&oacute;n",
+      "Control de Acceso",
+    ],
+  },
+  {
+    title: "Remediaci&oacute;n con Parches Directos",
+    subtitle: "Hotfix Deployment",
+    description:
+      "Inyecci&oacute;n quir&uacute;rgica de parches de seguridad sobre el repositorio del cliente. No entregamos informes sin acci&oacute;n: escribimos el c&oacute;digo que cierra la brecha y lo dejamos listo para producci&oacute;n.",
+    tags: [
+      "Parches Directos",
+      "Pull Requests",
+      "Zero-Day Mitigaci&oacute;n",
+      "Listo para Producci&oacute;n",
     ],
   },
 ];
 
 function SectionHeader() {
   return (
-    <div className="max-w-xl">
-      <span className="font-mono text-xs font-semibold tracking-[0.25em] text-cian">
-        01 // CAPACIDADES DE LÍNEA
-      </span>
-      <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tighter text-text-primary sm:text-4xl lg:text-5xl">
-        Soluciones de Seguridad de
-        <br />
-        Extremo a Extremo
-      </h2>
-      <p className="mt-4 max-w-lg text-sm leading-relaxed text-text-secondary sm:text-base">
-        Cada servicio está diseñado para cerrar brechas específicas en tu ciclo
-        de vida de desarrollo, desde la auditoría inicial hasta el hardening
-        final.
-      </p>
-    </div>
+    <ScrollAnimate>
+      <div className="max-w-xl">
+        <span className="font-mono text-xs font-semibold tracking-[0.25em] text-cobalt">
+          01 // CAPACIDADES DE L&Iacute;NEA
+        </span>
+        <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tighter text-text-primary sm:text-4xl lg:text-5xl">
+          Soluciones de Seguridad
+          <br />
+          de Extremo a Extremo
+        </h2>
+        <p className="mt-4 max-w-lg text-sm leading-relaxed text-text-secondary sm:text-base">
+          Cada servicio est&aacute; dise&ntilde;ado para cerrar brechas
+          espec&iacute;ficas en tu ciclo de vida de desarrollo, desde la
+          auditor&iacute;a inicial hasta el hardening final.
+        </p>
+      </div>
+    </ScrollAnimate>
   );
 }
 
@@ -73,48 +114,50 @@ function SolutionCard({
   index: number;
 }) {
   return (
-    <div
-      className={cn(
-        "group/card flex flex-col gap-5 rounded-xl border border-surface-border bg-surface p-6 transition-all duration-500",
-        "hover:border-cian/30 hover:bg-surface-card hover:shadow-glow-cian",
-      )}
-      style={{
-        animation: `fadeUp 0.8s ease-out ${0.2 + index * 0.12}s both`,
-      }}
-    >
-      <div className="space-y-1">
-        <h3 className="text-lg font-semibold text-text-primary">{title}</h3>
-        <p className="font-mono text-xs font-medium tracking-wider text-cian">
-          {subtitle}
-        </p>
-      </div>
+    <ScrollAnimate delay={0.1 * index} direction="up" distance={24}>
+      <div
+        className={cn(
+          "group/card flex h-full flex-col gap-5 rounded-xl border border-surface-border bg-surface-card p-6 transition-all duration-500",
+          "hover:border-cobalt/20 hover:bg-surface-elevated/50 hover:shadow-glow-cobalt",
+        )}
+      >
+        <div className="space-y-1">
+          <h3
+            className="text-lg font-semibold text-text-primary"
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
+          <p className="font-mono text-xs font-medium tracking-wider text-cobalt">
+            {subtitle}
+          </p>
+        </div>
 
-      <p className="text-sm leading-relaxed text-text-secondary">
-        {description}
-      </p>
+        <p
+          className="text-sm leading-relaxed text-text-secondary"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
 
-      <div className="mt-auto flex flex-wrap gap-1.5">
-        {tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-md border border-surface-border bg-surface-elevated/50 px-2.5 py-1 font-mono text-[11px] text-text-muted transition-colors duration-300 group-hover/card:border-cian/20 group-hover/card:text-text-secondary"
-          >
-            {tag}
-          </span>
-        ))}
+        <div className="mt-auto flex flex-wrap gap-1.5">
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-md border border-surface-border bg-surface/50 px-2.5 py-1 font-mono text-[11px] text-text-muted transition-colors duration-300 group-hover/card:border-cobalt/15 group-hover/card:text-text-secondary"
+              dangerouslySetInnerHTML={{ __html: tag }}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </ScrollAnimate>
   );
 }
 
 export function SolutionsSection() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-24 lg:py-32">
+    <section id="servicios" className="mx-auto max-w-7xl px-4 py-24 lg:py-32">
       <SectionHeader />
 
-      <div className="mt-16 grid grid-cols-1 gap-5 md:gap-6 lg:grid-cols-3">
+      <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
         {solutions.map((solution, index) => (
-          <SolutionCard key={solution.title} {...solution} index={index} />
+          <SolutionCard key={solution.subtitle} {...solution} index={index} />
         ))}
       </div>
     </section>

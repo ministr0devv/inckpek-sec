@@ -1,106 +1,96 @@
-import { cn } from "@/lib/utils";
+"use client";
 
-const fadeUp = "animate-[fadeUp_0.8s_ease-out_both]";
-const fadeUpD1 = "animate-[fadeUp_0.8s_ease-out_0.15s_both]";
-const fadeUpD2 = "animate-[fadeUp_0.8s_ease-out_0.3s_both]";
-const fadeUpD3 = "animate-[fadeUp_0.8s_ease-out_0.45s_both]";
+import { cn } from "@/lib/utils";
+import { ScrollAnimate } from "@/components/ui/ScrollAnimate";
 
 function Badge() {
   return (
-    <div
-      className={cn(
-        "inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface-elevated/80 px-4 py-1.5",
-        fadeUp,
-      )}
-    >
-      <span className="relative flex size-2">
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-75" />
-        <span className="relative inline-flex size-2 rounded-full bg-success" />
-      </span>
-      <span className="text-[11px] font-medium uppercase tracking-wider text-text-secondary">
-        Disponibilidad inmediata para auditorías críticas
-      </span>
-    </div>
+    <ScrollAnimate delay={0}>
+      <div className="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface-card/80 px-4 py-1.5">
+        <span className="relative flex size-2">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-75" />
+          <span className="relative inline-flex size-2 rounded-full bg-success" />
+        </span>
+        <span className="text-[11px] font-medium uppercase tracking-wider text-text-secondary">
+          Disponibilidad inmediata para auditorías críticas
+        </span>
+      </div>
+    </ScrollAnimate>
   );
 }
 
 function HeroTitle() {
   return (
-    <h1
-      className={cn(
-        "max-w-4xl text-4xl font-bold leading-[1.05] tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl",
-        fadeUpD1,
-      )}
-    >
-      <span className="bg-gradient-to-r from-white via-ink-50 to-ink-200 bg-clip-text text-transparent">
-        Blindamos el código fuente de tu infraestructura
-      </span>{" "}
-      <span className="bg-gradient-to-r from-cian-300 via-cian to-cian-600 bg-clip-text text-transparent">
-        antes de la brecha.
-      </span>
-    </h1>
+    <ScrollAnimate delay={0.12} distance={40}>
+      <h1 className="max-w-4xl text-4xl font-bold leading-[1.05] tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+        <span className="text-text-primary">
+          Garantizamos la integridad de su c&oacute;digo fuente
+        </span>{" "}
+        <span className="text-cobalt">antes de la brecha inform&aacute;tica.</span>
+      </h1>
+    </ScrollAnimate>
   );
 }
 
 function HeroSubtext() {
   return (
-    <p
-      className={cn(
-        "max-w-2xl text-base leading-relaxed text-text-secondary sm:text-lg",
-        fadeUpD2,
-      )}
-    >
-      Auditorías de seguridad híbridas y remediación DevSecOps de alto nivel.
-      Combinamos el análisis ofensivo manual experto y la optimización
-      inteligente para entregar parches de código listos para producción.
-    </p>
+    <ScrollAnimate delay={0.2} distance={32}>
+      <p className="max-w-2xl text-base leading-relaxed text-text-secondary sm:text-lg">
+        Auditor&iacute;as de seguridad ofensiva combinadas con an&aacute;lisis
+        est&aacute;tico SAST y din&aacute;mico DAST. Entregamos parches de
+        c&oacute;digo listos para producci&oacute;n en menos de 24h para
+        incidentes cr&iacute;ticos.
+      </p>
+    </ScrollAnimate>
   );
 }
 
 function HeroActions() {
   return (
-    <div className={cn("flex flex-wrap items-center gap-4", fadeUpD3)}>
-      <a
-        href="#contacto"
-        className={cn(
-          "inline-flex items-center gap-2 rounded-md bg-cian px-6 py-3 text-sm font-semibold uppercase tracking-wider text-ink-900 transition-all duration-300",
-          "hover:bg-cian-400 hover:shadow-glow-cian",
-        )}
-      >
-        Agendar Consultoría Técnica
-      </a>
-      <a
-        href="#casos"
-        className={cn(
-          "inline-flex items-center gap-2 rounded-md border border-surface-border bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wider text-text-secondary transition-all duration-300",
-          "hover:border-text-secondary hover:text-text-primary",
-        )}
-      >
-        Ver Casos de Éxito
-      </a>
-    </div>
+    <ScrollAnimate delay={0.3} distance={32}>
+      <div className="flex flex-wrap items-center gap-4">
+        <a
+          href="#contacto"
+          className={cn(
+            "inline-flex items-center gap-2 rounded-md bg-cobalt px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300",
+            "hover:bg-cobalt-500 hover:shadow-glow-cobalt",
+          )}
+        >
+          Agendar Consultor&iacute;a T&eacute;cnica
+        </a>
+        <a
+          href="#metodologia"
+          className={cn(
+            "inline-flex items-center gap-2 rounded-md border border-surface-border bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wider text-text-secondary transition-all duration-300",
+            "hover:border-text-secondary hover:text-text-primary",
+          )}
+        >
+          Ver Metodolog&iacute;a
+        </a>
+      </div>
+    </ScrollAnimate>
   );
 }
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden px-4">
+    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden px-4 pt-16">
       <div
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
-          background: `
-            radial-gradient(ellipse 80% 60% at 50% -10%, rgba(0, 180, 216, 0.06), transparent),
-            radial-gradient(ellipse 60% 50% at 50% 110%, rgba(0, 180, 216, 0.03), transparent)
-          `,
+          background: [
+            "radial-gradient(ellipse 80% 50% at 50% -15%, rgba(37, 99, 235, 0.05), transparent)",
+            "radial-gradient(ellipse 60% 40% at 50% 120%, rgba(37, 99, 235, 0.03), transparent)",
+          ].join(", "),
         }}
       />
       <div
         className="pointer-events-none absolute inset-0 -z-10 opacity-[0.015]"
         style={{
-          backgroundImage: `
-            linear-gradient(rgba(0, 180, 216, 1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0, 180, 216, 1) 1px, transparent 1px)
-          `,
+          backgroundImage: [
+            "linear-gradient(rgba(37, 99, 235, 1) 1px, transparent 1px)",
+            "linear-gradient(90deg, rgba(37, 99, 235, 1) 1px, transparent 1px)",
+          ].join(", "),
           backgroundSize: "64px 64px",
         }}
       />

@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const links = [
   { label: "Servicios", href: "#servicios" },
   { label: "Metodología", href: "#metodologia" },
-  { label: "Casos de Éxito", href: "#casos" },
+  { label: "Resultados", href: "#resultados" },
 ];
 
 export function Navbar() {
@@ -24,8 +24,8 @@ export function Navbar() {
           href="/"
           className="font-mono text-sm font-semibold tracking-widest text-text-primary"
         >
-          INCKPEK SEC
-          <span className="text-cian"> //</span>
+          <span className="text-cobalt">//</span> INCKPEK
+          <span className="text-text-muted"> SEC</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -43,8 +43,8 @@ export function Navbar() {
         <a
           href="#contacto"
           className={cn(
-            "hidden rounded-md border border-cian/30 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cian transition-all duration-300 md:inline-flex",
-            "hover:shadow-glow-cian hover:border-cian/60",
+            "hidden rounded-md border border-cobalt/30 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cobalt transition-all duration-300 md:inline-flex",
+            "hover:border-cobalt/60 hover:shadow-glow-cobalt",
           )}
         >
           Solicitar Auditoría
@@ -77,7 +77,7 @@ export function Navbar() {
             <a
               href="#contacto"
               onClick={() => setMenuOpen(false)}
-              className="mt-2 inline-flex self-start rounded-md border border-cian/30 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cian"
+              className="mt-2 inline-flex self-start rounded-md border border-cobalt/30 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cobalt"
             >
               Solicitar Auditoría
             </a>

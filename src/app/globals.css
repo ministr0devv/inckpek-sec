@@ -2,42 +2,42 @@
 @config "../../tailwind.config.ts";
 
 @theme inline {
-  --color-ink-950: #030307;
-  --color-ink-900: #05050a;
-  --color-ink-800: #0a0a12;
-  --color-ink-700: #0f0f1a;
-  --color-ink-600: #141420;
-  --color-ink-500: #1a1a2e;
-  --color-ink-400: #262640;
-  --color-ink-300: #3a3a5c;
-  --color-ink-200: #555580;
-  --color-ink-100: #8080aa;
-  --color-ink-50: #aeaecf;
-  --color-cian: #00b4d8;
-  --color-cian-50: #e0f7ff;
-  --color-cian-100: #b3ecff;
-  --color-cian-200: #80e0ff;
-  --color-cian-300: #4dd4ff;
-  --color-cian-400: #26c8ff;
-  --color-cian-500: #00b4d8;
-  --color-cian-600: #0090ad;
-  --color-cian-700: #006c82;
-  --color-cian-800: #004857;
-  --color-cian-900: #00242d;
-  --color-surface: #030307;
-  --color-surface-card: #0a0a12;
-  --color-surface-elevated: #141420;
-  --color-surface-border: #1a1a2e;
-  --color-surface-hover: #262640;
-  --color-text-primary: #ececf1;
-  --color-text-secondary: #9d9db5;
-  --color-text-muted: #5c5c7a;
+  --color-ink-950: #050508;
+  --color-ink-900: #07070d;
+  --color-ink-800: #0a0a14;
+  --color-ink-700: #0d0d1a;
+  --color-ink-600: #111122;
+  --color-ink-500: #16162e;
+  --color-ink-400: #1e1e3d;
+  --color-ink-300: #2a2a50;
+  --color-ink-200: #3d3d6b;
+  --color-ink-100: #555589;
+  --color-ink-50: #7272a8;
+  --color-cobalt: #2563eb;
+  --color-cobalt-50: #eff6ff;
+  --color-cobalt-100: #dbeafe;
+  --color-cobalt-200: #bfdbfe;
+  --color-cobalt-300: #93c5fd;
+  --color-cobalt-400: #60a5fa;
+  --color-cobalt-500: #3b82f6;
+  --color-cobalt-600: #2563eb;
+  --color-cobalt-700: #1d4ed8;
+  --color-cobalt-800: #1e40af;
+  --color-cobalt-900: #1e3a8a;
+  --color-surface: #050508;
+  --color-surface-card: #0f172a;
+  --color-surface-elevated: #1e293b;
+  --color-surface-border: #1e293b;
+  --color-surface-hover: #334155;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
   --font-sans: Inter, system-ui, sans-serif;
   --font-mono: JetBrains Mono, Fira Code, monospace;
-  --shadow-glow-cian: 0 0 20px rgba(0, 180, 216, 0.15);
-  --shadow-glow-cian-lg: 0 0 40px rgba(0, 180, 216, 0.1);
-  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.4);
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-glow-cobalt: 0 0 20px rgba(37, 99, 235, 0.12);
+  --shadow-glow-cobalt-lg: 0 0 40px rgba(37, 99, 235, 0.08);
+  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 @keyframes fadeUp {
@@ -62,8 +62,8 @@ html {
 }
 
 body {
-  background-color: #030307;
-  color: #ececf1;
+  background-color: #050508;
+  color: #ffffff;
   font-family: Inter, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -79,6 +79,6 @@ body {
 }
 
 ::selection {
-  background-color: rgba(0, 180, 216, 0.2);
-  color: #ececf1;
+  background-color: rgba(37, 99, 235, 0.2);
+  color: #ffffff;
 }
